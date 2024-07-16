@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>My Posts</h2>
+<ul>
+    {% for post in posts %}
+    <li>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" width="100">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
